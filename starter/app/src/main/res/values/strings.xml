@@ -7,7 +7,11 @@
     <string name="password">Password:</string>
     <string name="login">Login</string>
     <string name="create_new_account">Create Account</string>
-    <string name="welcome_text_1">Welcome to Shosers</string>
-    <string name="welcome_text_2">The Best Place To Buy Shoses</string>
+    <string name="welcome_text_1">Welcome to Shoesers</string>
+    <string name="welcome_text_2">The Best Place To Buy Shoes</string>
     <string name="instructions">Instructions</string>
+    <string name="instruction_1">1. Please click on the button below to go to shoes list screen</string>
+    <string name="instruction_2">2. Then you will find a FAB with a plus to add new shoe to the list</string>
+    <string name="instruction_3">3. You can logout using the menu up in the toolbar</string>
+    <string name="shoes_list">Go to Shoes List</string>
 </resources>
