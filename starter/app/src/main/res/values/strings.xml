@@ -16,5 +16,8 @@
     <string name="shoes_list">Go to Shoes List</string>
     <string name="floating_action_button_content_description">Button to add new Items to the list</string>
     <string name="scroll_view_content_description">ScrollView to scroll the list of shoes</string>
+    <string name="welcome">Welcome</string>
+    <string name="inventory">Inventory</string>
+    <string name="logout">Logout</string>
     >
 </resources>
