@@ -17,7 +17,7 @@ class InstructionsFragment : Fragment() {
 
     private lateinit var binding: FragmentInstructionsBinding
 
-    // Create the button
+    // Create the
     lateinit var shoesListButton: Button
 
     override fun onCreateView(

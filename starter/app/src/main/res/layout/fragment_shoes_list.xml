@@ -9,7 +9,7 @@
         tools:context=".screens.shoeslist.ShoesListFragment">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton2"
+            android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ScrollView
-            android:id="@+id/scrollView2"
+            android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@string/scroll_view_content_description"
@@ -36,6 +36,7 @@
             app:layout_constraintVertical_bias="1.0">
 
             <LinearLayout
+                android:id="@+id/shoe_list_linear_layout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
