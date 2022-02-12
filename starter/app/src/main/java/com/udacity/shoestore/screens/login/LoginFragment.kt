@@ -15,6 +15,7 @@ class LoginFragment : Fragment() {
 
     private lateinit var binding : FragmentLoginBinding
 
+    // Create the buttons
     private lateinit var loginButton : Button
     private lateinit var createAccountButton : Button
 

@@ -1,17 +1,20 @@
 <resources>
     <string name="app_name">ShoeStore</string>
-    <string name="store_name">Shoesers</string>
+    <string name="store_name">Shoesers Inventory</string>
     <string name="email_hint">somerone@email.com</string>
     <string name="your_password">Your Password…</string>
     <string name="email">Email:</string>
     <string name="password">Password:</string>
     <string name="login">Login</string>
     <string name="create_new_account">Create Account</string>
-    <string name="welcome_text_1">Welcome to Shoesers</string>
-    <string name="welcome_text_2">The Best Place To Buy Shoes</string>
+    <string name="welcome_text_1">Welcome to the Inventory</string>
+    <string name="welcome_text_2">This app is to add new shoes Items</string>
     <string name="instructions">Instructions</string>
     <string name="instruction_1">1. Please click on the button below to go to shoes list screen</string>
     <string name="instruction_2">2. Then you will find a FAB with a plus to add new shoe to the list</string>
     <string name="instruction_3">3. You can logout using the menu up in the toolbar</string>
     <string name="shoes_list">Go to Shoes List</string>
+    <string name="floating_action_button_content_description">Button to add new Items to the list</string>
+    <string name="scroll_view_content_description">ScrollView to scroll the list of shoes</string>
+    >
 </resources>
