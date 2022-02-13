@@ -27,7 +27,8 @@
     <string name="save">Save</string>
     <string name="shoe_name_hint">adidas 4556</string>
     <string name="size_hint">42</string>
-    <string name="description_hint">sport type shoe...</string>
+    <string name="description_hint">sport type shoe…</string>
     <string name="shoe_company_hint">Nikeee</string>
+    <string name="shoe_details">Adding a shoe …</string>
     >
 </resources>

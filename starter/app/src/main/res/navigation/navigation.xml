@@ -39,12 +39,12 @@
         tools:layout="@layout/fragment_shoes_list" >
         <action
             android:id="@+id/action_shoesList_destination_to_shoeDetails"
-            app:destination="@id/shoeDetails" />
+            app:destination="@id/shoeDetails_destination" />
     </fragment>
     <fragment
-        android:id="@+id/shoeDetails"
+        android:id="@+id/shoeDetails_destination"
         android:name="com.udacity.shoestore.screens.shoedetails.ShoeDetails"
-        android:label="ShoeDetails"
+        android:label="@string/shoe_details"
         tools:layout="@layout/fragment_shoe_details">
         <action
             android:id="@+id/action_shoeDetails_to_shoesList_destination"
