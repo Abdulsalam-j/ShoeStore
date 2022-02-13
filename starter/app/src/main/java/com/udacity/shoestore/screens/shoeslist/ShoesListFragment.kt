@@ -39,13 +39,13 @@ class ShoesListFragment : Fragment() {
         viewModel.shoesList.observe(viewLifecycleOwner) { newShoeList ->
             for (item in newShoeList.listIterator()) {
                 val name = TextView(this.context)
-                name.text = item.name
+                name.text = getString(R.string.name_place_holder, item.name)
                 val size = TextView(this.context)
-                size.text = item.size.toString()
+                size.text = getString(R.string.size_place_holder, item.size)
                 val company = TextView(this.context)
-                company.text = item.company
+                company.text = getString(R.string.company_place_holder, item.company)
                 val description = TextView(this.context)
-                description.text = item.description
+                description.text = getString(R.string.description_place_holder, item.description)
 
                 // Increase the text size
                 name.textSize = 26F

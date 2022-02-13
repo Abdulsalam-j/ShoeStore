@@ -30,5 +30,10 @@
     <string name="description_hint">sport type shoe…</string>
     <string name="shoe_company_hint">Nikeee</string>
     <string name="shoe_details">Adding a shoe …</string>
-    >
+    <string name="name_place_holder">Shoes Name: %1$s</string>
+    <string name="company_place_holder">Shoes Company: %1$s</string>
+    <string name="size_place_holder">Size: %1$.1f</string>
+    <string name="description_place_holder">Description: %1$s</string>
+
+
 </resources>

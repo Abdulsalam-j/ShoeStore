@@ -49,6 +49,10 @@ class ShoeDetails : Fragment() {
     }
 
     private fun cancelShoe() {
+        binding.shoeNameEditText.text.clear()
+        binding.shoeCompanyEditText.text.clear()
+        binding.shoeSizeEditText.text.clear()
+        binding.descriptionEditText.text.clear()
         navigateToShoeList()
     }
 
