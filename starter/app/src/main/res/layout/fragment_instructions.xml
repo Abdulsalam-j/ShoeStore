@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.instructions.InstructionsFragment">
 
+    <!-- Linear Layout because it's basic and don't need a lot of nesting -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

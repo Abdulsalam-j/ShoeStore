@@ -27,55 +27,63 @@ class ShoesListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment using binding
-        binding = DataBindingUtil.inflate(layoutInflater, R.layout.fragment_shoes_list, container, false)
+        binding = DataBindingUtil.inflate(layoutInflater,
+            R.layout.fragment_shoes_list, container, false)
+
+        // Set the lifecycleOwner to the binding object
+        binding.lifecycleOwner = this
 
         // Setup the FAB to navigate to the details destination
         floatingButton = binding.floatingActionButton
         floatingButton.setOnClickListener { navigateToShoeDetails() }
 
-        // Let the fragment know about the menu
-        setHasOptionsMenu(true)
-
+        // Observe the ShoeList from the viewModel
         viewModel.shoesList.observe(viewLifecycleOwner) { newShoeList ->
-            for (item in newShoeList.listIterator()) {
-                val name = TextView(this.context)
-                name.text = getString(R.string.name_place_holder, item.name)
-                val size = TextView(this.context)
-                size.text = getString(R.string.size_place_holder, item.size)
-                val company = TextView(this.context)
-                company.text = getString(R.string.company_place_holder, item.company)
-                val description = TextView(this.context)
-                description.text = getString(R.string.description_place_holder, item.description)
+            if (newShoeList.isNotEmpty()) {
+                for (item in newShoeList.listIterator()) {
+                    val name = TextView(this.context)
+                    name.text = getString(R.string.name_place_holder, item.name)
+                    val size = TextView(this.context)
+                    size.text = getString(R.string.size_place_holder, item.size)
+                    val company = TextView(this.context)
+                    company.text = getString(R.string.company_place_holder, item.company)
+                    val description = TextView(this.context)
+                    description.text =
+                        getString(R.string.description_place_holder, item.description)
 
-                // Increase the text size
-                name.textSize = 26F
-                size.textSize = 24F
-                company.textSize = 24F
-                description.textSize = 18F
+                    // Increase the text size
+                    name.textSize = 26F
+                    size.textSize = 24F
+                    company.textSize = 24F
+                    description.textSize = 18F
 
-                // Parent layout for our views
-                val parentLayout = LinearLayout(this.context)
-                parentLayout.orientation = LinearLayout.VERTICAL
-                parentLayout.setPadding(16, 16, 16, 16)
+                    // Parent layout for our views
+                    val parentLayout = LinearLayout(this.context)
+                    parentLayout.orientation = LinearLayout.VERTICAL
+                    parentLayout.setPadding(16, 16, 16, 16)
 
-                // Layout Parameters to set the parent layout with
-                val layoutParams = LinearLayout.LayoutParams(
-                    /*width*/
-                    LinearLayout.LayoutParams.MATCH_PARENT,
-                    /*height*/
-                    LinearLayout.LayoutParams.WRAP_CONTENT
-                )
+                    // Layout Parameters to set the parent layout with
+                    val layoutParams = LinearLayout.LayoutParams(
+                        /*width*/
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        /*height*/
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                    )
 
-                // Adding the views
-                parentLayout.addView(name)
-                parentLayout.addView(size)
-                parentLayout.addView(company)
-                parentLayout.addView(description)
+                    // Adding the views
+                    parentLayout.addView(name)
+                    parentLayout.addView(size)
+                    parentLayout.addView(company)
+                    parentLayout.addView(description)
 
-                // Add the layout to the base layout resource
-                binding.shoeListLinearLayout.addView(parentLayout, layoutParams)
+                    // Add the layout to the base layout resource
+                    binding.shoeListLinearLayout.addView(parentLayout, layoutParams)
+                }
             }
         }
+
+        // Let the fragment know about the menu
+        setHasOptionsMenu(true)
 
         // Return the outermost view in the layout
         return binding.root

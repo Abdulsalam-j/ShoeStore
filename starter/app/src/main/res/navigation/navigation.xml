@@ -12,7 +12,9 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
-            app:destination="@id/welcome_destination" />
+            app:destination="@id/welcome_destination"
+            app:popUpTo="@id/login_destination"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/welcome_destination"
@@ -21,7 +23,9 @@
         tools:layout="@layout/fragment_welcome">
         <action
             android:id="@+id/action_welcome_destination_to_instructionsFragment"
-            app:destination="@id/instructions_destination" />
+            app:destination="@id/instructions_destination"
+            app:popUpTo="@id/welcome_destination"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/instructions_destination"
@@ -32,7 +36,7 @@
             android:id="@+id/action_instructions_destination_to_shoesListFragment"
             app:destination="@id/shoesList_destination"
             app:popUpTo="@id/login_destination"
-            app:popUpToInclusive="true" />
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/shoesList_destination"
@@ -42,17 +46,19 @@
         <action
             android:id="@+id/action_shoesList_destination_to_shoeDetails"
             app:destination="@id/shoeDetails_destination"
-            app:launchSingleTop="true"
-            app:popUpTo="@id/shoesList_destination" />
+            app:popUpTo="@id/shoesList_destination"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/shoeDetails_destination"
-        android:name="com.udacity.shoestore.screens.shoedetails.ShoeDetails"
+        android:name="com.udacity.shoestore.screens.shoedetails.ShoeDetailsFragment"
         android:label="@string/shoe_details"
         tools:layout="@layout/fragment_shoe_details">
         <action
             android:id="@+id/action_shoeDetails_to_shoesList_destination"
             app:destination="@id/shoesList_destination"
-            app:popUpTo="@id/shoesList_destination" />
+            app:launchSingleTop="false"
+            app:popUpTo="@id/login_destination"
+            app:popUpToInclusive="false" />
     </fragment>
 </navigation>
