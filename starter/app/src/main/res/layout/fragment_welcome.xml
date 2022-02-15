@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".screens.welcome.WelcomeFragment">
 
-    <!-- Linear Layout because it's basic and don't need a lot of nesting -->
+    <!-- Linear Layout because it's basic and no nesting -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,20 +25,15 @@
             android:text="@string/welcome_text_2"
             android:textSize="33sp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/instructionButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_margin="16dp"
-                android:backgroundTint="@android:color/holo_blue_dark"
-                android:text="@string/instructions"
-                android:textSize="33sp" />
-        </LinearLayout>
+        <Button
+            android:id="@+id/instructionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_36_dp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:text="@string/instructions"
+            android:textSize="33sp" />
+
     </LinearLayout>
 </layout>

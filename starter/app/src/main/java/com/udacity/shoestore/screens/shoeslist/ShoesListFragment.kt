@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.*
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.findNavController
@@ -16,9 +15,9 @@ import com.udacity.shoestore.databinding.FragmentShoesListBinding
 
 class ShoesListFragment : Fragment() {
 
-    private lateinit var binding : FragmentShoesListBinding
+    private lateinit var binding: FragmentShoesListBinding
 
-    private lateinit var floatingButton : FloatingActionButton
+    private lateinit var floatingButton: FloatingActionButton
 
     private val viewModel: ShoesListViewModel by activityViewModels()
 
@@ -27,8 +26,9 @@ class ShoesListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         // Inflate the layout for this fragment using binding
-        binding = DataBindingUtil.inflate(layoutInflater,
-            R.layout.fragment_shoes_list, container, false)
+        binding = FragmentShoesListBinding.inflate(
+            layoutInflater, container, false
+        )
 
         // Set the lifecycleOwner to the binding object
         binding.lifecycleOwner = this
@@ -71,10 +71,12 @@ class ShoesListFragment : Fragment() {
                     )
 
                     // Adding the views
-                    parentLayout.addView(name)
-                    parentLayout.addView(size)
-                    parentLayout.addView(company)
-                    parentLayout.addView(description)
+                    with(parentLayout) {
+                        addView(name)
+                        addView(size)
+                        addView(company)
+                        addView(description)
+                    }
 
                     // Add the layout to the base layout resource
                     binding.shoeListLinearLayout.addView(parentLayout, layoutParams)
@@ -89,7 +91,7 @@ class ShoesListFragment : Fragment() {
         return binding.root
     }
 
-    private fun navigateToShoeDetails(){
+    private fun navigateToShoeDetails() {
         val action = ShoesListFragmentDirections.actionShoesListDestinationToShoeDetails()
         findNavController().navigate(action)
     }
