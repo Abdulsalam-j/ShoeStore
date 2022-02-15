@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration
             .Builder(
                 R.id.login_destination,
-                R.id.shoesList_destination
+                R.id.shoesList_destination,
             )
             .build()
 
